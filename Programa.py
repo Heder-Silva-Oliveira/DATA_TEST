@@ -21,4 +21,5 @@ schema = pa.DataFrameSchema(
     }
 )
 
+df.replace([ '*', '###!', '####', '****', '*****', 'NULL'], pd.NA, inplace=True)
 print(schema.validate(df))
