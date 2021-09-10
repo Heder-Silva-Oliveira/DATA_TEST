@@ -14,7 +14,7 @@ df.pop('ocorrencia_pais')
 df.pop('investigacao_aeronave_liberada')
 df.pop('investigacao_status')
 df.pop('divulgacao_relatorio_numero')
-df.pop('divulgacao_dia_publicacao ')
+df.pop('divulgacao_dia_publicacao')
 
 schema = pa.DataFrameSchema(
     columns={
