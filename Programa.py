@@ -6,6 +6,15 @@ df = pd.read_csv("ocorrencia.csv", sep=';', parse_dates=['ocorrencia_dia'], dayf
 df.pop('ocorrencia_saida_pista')
 df.pop('total_aeronaves_envolvidas')
 df.pop('codigo_ocorrencia1')
+df.pop('codigo_ocorrencia3')
+df.pop('codigo_ocorrencia4')
+df.pop('ocorrencia_longitude')
+df.pop('ocorrencia_latitude')
+df.pop('ocorrencia_pais')
+df.pop('investigacao_aeronave_liberada')
+df.pop('investigacao_status')
+df.pop('divulgacao_relatorio_numero')
+df.pop('divulgacao_dia_publicacao ')
 
 schema = pa.DataFrameSchema(
     columns={
@@ -22,4 +31,4 @@ schema = pa.DataFrameSchema(
 )
 
 df.replace(['*', '###!', '####', '****', '*****', 'NULL'], pd.NA, inplace=True)
-print(schema.validate(df))
+print(df.isnull().sum())
