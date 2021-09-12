@@ -31,6 +31,7 @@ schema = pa.DataFrameSchema(
     }
 )
 
-schema.validate(df)
+
 #print(df.isnull().sum())
+print(df.dtypes)
 
