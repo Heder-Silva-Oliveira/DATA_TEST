@@ -34,5 +34,6 @@ schema = pa.DataFrameSchema(
 
 #print(df.isnull().sum())
 df['ocorrencia_dia_hora'] = pd.to_datetime(df.ocorrencia_dia.astype(str) + " " + df.ocorrencia_hora)
+
 print(df.ocorrencia_dia_hora)
 
